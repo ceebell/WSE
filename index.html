@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="หน้ารวมบทเรียน WSE เลือกทบทวน Unit 57 และ Unit 58 พร้อมสรุปเนื้อหา คำศัพท์ และไวยากรณ์">
+  <title>WSE · รวมบทเรียน</title>
+  <style>
+    :root {
+      --bg: #f7f8f6;
+      --ink: #192a34;
+      --muted: #5d7078;
+      --line: #dce5e2;
+      --teal: #267e75;
+      --blue: #4568a8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+    }
+
+    .shell { width: min(100% - 48px, 960px); margin-inline: auto; }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--ink);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .brand-name { font-weight: 750; }
+    .brand-caption { margin: 0; color: var(--muted); font-size: .8rem; }
+
+    main { flex: 1; padding-block: clamp(48px, 8vw, 90px); }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      line-height: 1.4;
+      letter-spacing: -.03em;
+    }
+
+    .lead { margin: 0; max-width: 620px; color: var(--muted); }
+
+    .units {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .unit {
+      --accent: var(--teal);
+      --soft: #eaf5f1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 300px;
+      padding: clamp(24px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--accent);
+      border-radius: 20px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 0 14px 40px rgb(26 53 62 / 5%);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .unit-blue { --accent: var(--blue); --soft: #edf2fb; }
+
+    .unit:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 46px rgb(26 53 62 / 10%);
+    }
+
+    .unit:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+
+    .tag {
+      padding: 5px 11px;
+      border-radius: 8px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
+
+    h2 { margin: 22px 0 8px; font-size: 2rem; line-height: 1.3; letter-spacing: -.03em; }
+    .unit p { margin: 0 0 28px; color: var(--muted); }
+
+    .open {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--accent);
+      font-weight: 750;
+    }
+
+    .arrow { font-size: 1.5rem; line-height: 1; }
+    footer { padding-block: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+
+    @media (max-width: 600px) {
+      .shell { width: calc(100% - 32px); }
+      .units { grid-template-columns: 1fr; gap: 18px; margin-top: 28px; }
+      .unit { min-height: 270px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .unit { transition: none; }
+      .unit:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell brand">
+      <span class="brand-mark" aria-hidden="true">WSE</span>
+      <div>
+        <div class="brand-name">WSE Study Guide</div>
+        <p class="brand-caption">รวมสรุปบทเรียนภาษาอังกฤษ</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <p class="eyebrow" lang="en">YOUR LEARNING SPACE</p>
+    <h1>วันนี้จะทบทวน Unit ไหน?</h1>
+    <p class="lead">เลือกบทเรียนที่ต้องการ เพื่อทบทวนเนื้อหา คำศัพท์ และไวยากรณ์ พร้อมคำอธิบายภาษาไทย</p>
+
+    <nav class="units" aria-label="เลือก Unit บทเรียน">
+      <a class="unit" href="unit57_all_lessons-v1.html" aria-labelledby="unit57-title">
+        <span class="tag" lang="en">STUDY GUIDE</span>
+        <h2 id="unit57-title" lang="en">Unit 57</h2>
+        <p>รวมสรุปบทเรียน Unit 57 สำหรับอ่านและทบทวนด้วยตัวเอง</p>
+        <span class="open">เข้าสู่บทเรียน <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+
+      <a class="unit unit-blue" href="unit58_all_lessons.html" aria-labelledby="unit58-title">
+        <span class="tag" lang="en">STUDY GUIDE</span>
+        <h2 id="unit58-title" lang="en">Unit 58</h2>
+        <p>รวมสรุปบทเรียน Unit 58 สำหรับอ่านและทบทวนด้วยตัวเอง</p>
+        <span class="open">เข้าสู่บทเรียน <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="shell">WSE Study Guide · เรียนรู้ทีละบท ทบทวนได้ทุกเวลา</div>
+  </footer>
+</body>
+</html>
